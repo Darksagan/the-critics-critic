@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 10%;
+
+    --primary: 12 75% 45%;  /* Rich red similar to Rotten Tomatoes but darker */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 105 60% 40%;  /* Fresh green for positive reviews */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 42 80% 50%;  /* Golden accent for awards/recognition */
+    --accent-foreground: 220 10% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 220 10% 90%;
+
+    --radius: 0.5rem;
+
+    /* Chart colors for data visualization */
+    --chart-1: 12 75% 45%;   /* Similar to primary, dark red */
+    --chart-2: 105 60% 40%;  /* Green */
+    --chart-3: 200 65% 45%;  /* Blue */
+    --chart-4: 42 80% 50%;   /* Gold */
+    --chart-5: 280 65% 45%;  /* Purple */
+  }
+
+  .dark {
+    --background: 220 10% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 10% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 12 75% 55%;  /* Brighter red in dark mode */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 105 60% 45%;  /* Brighter green in dark mode */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 10% 18%;
+    --muted-foreground: 220 10% 70%;
+
+    --accent: 42 80% 60%;  /* Brighter gold in dark mode */
+    --accent-foreground: 220 10% 10%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 220 10% 80%;
+
+    /* Chart colors for data visualization in dark mode */
+    --chart-1: 12 75% 55%;   /* Red */
+    --chart-2: 105 60% 45%;  /* Green */
+    --chart-3: 200 65% 55%;  /* Blue */
+    --chart-4: 42 80% 60%;   /* Gold */
+    --chart-5: 280 65% 55%;  /* Purple */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+}
+
+.section {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.container-custom {
+  @apply container max-w-7xl mx-auto px-4 sm:px-6;
+}
